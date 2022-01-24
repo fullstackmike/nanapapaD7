@@ -1,0 +1,29 @@
+<?php
+function custom_data_layer_init() {
+	//drupal_set_message("start custom data layer");
+}
+
+function custom_data_layer_datalayer_meta_alter(&$properties) {
+	//print_r($properties);
+}
+	
+function custom_data_layer_datalayer_meta() {
+  return array(
+    'property',
+  );
+}
+
+function custom_data_layer_datalayer_alter(&$data_layer) {
+  // Make the title lowercase on some node type.
+  if (isset($data_layer['entityBundle']) && $data_layer['entityBundle'] == 'blog') {
+    $data_layer['entityLabel'] = strtolower($data_layer['entityLabel']);
+  }
+}
+
+function _custom_data_layer_myevent_func($argument = FALSE) {
+  if ($argument) {
+    datalayer_add(array(
+      'drupalMyProperty' => $argument,
+    ));
+  }
+}

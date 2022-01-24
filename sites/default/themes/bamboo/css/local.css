@@ -1,0 +1,38 @@
+/**
+ * @file
+ * Local CSS - rename this to local.css, check the 
+ * box in theme settings and add your own styles here.
+ */
+.float_left {
+	float:left;
+	margin:0 10px 5px 0;
+}
+.views-row {
+	clear:both;
+}
+.hp_image_thumbnail {
+	width:150px;
+}
+@media only screen and (min-width:768px) {
+	.view-primary-list {
+		margin-left:50px;
+	}
+	.view-primary-list .views-field-body {
+		margin-left: 250px;
+		margin-right:100px;
+		margin-top:10px;
+	}
+	.view-primary-list .views-field-title {
+		margin-left: 200px;
+		font-weight:bold;
+	}
+	.view-primary-list .views-field-field-date {
+		margin-left: 200px;
+		font-size:.9em;
+		font-style:italic;
+	}
+}
+
+body.front .page-title {
+	text-align:center;
+}
